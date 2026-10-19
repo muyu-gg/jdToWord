@@ -1,0 +1,34 @@
+# ---- 隐私与本地数据：绝不入库 ----
+# 所有用户数据（简历、JD、生成的 Word、截图、中间产物）一律本地存放，不进仓库
+.work/
+work/
+out/
+output/
+*.docx
+*.doc
+*.zip
+*.jobs.json
+*_ocr.txt
+
+# ---- 第三方 / 虚拟环境：不 vendor（word-ai 由使用者自行安装） ----
+.venv/
+venv/
+env/
+tools/word-ai/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ---- 本机配置：含绝对路径 ----
+.mcp.json
+.claude/settings.local.json
+.idea/
+.vscode/
+
+# ---- 系统 ----
+Thumbs.db
+Desktop.ini
+.DS_Store

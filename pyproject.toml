@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jd2word"
+version = "0.1.0"
+description = "输入岗位 JD 或截图，分析后直接用 Word AI 改写你的 Word 简历（保结构、纯本地）"
+authors = [{ name = "muyu-gg" }]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0-or-later" }
+keywords = ["resume", "docx", "word", "job-description", "agent", "skill"]
+dependencies = [
+    "lxml>=4.9",
+    "python-docx>=1.1.0",
+    "langgraph>=0.2",
+]
+
+[project.scripts]
+jd2word = "jd2word.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/muyu-gg/jdToWord"
+
+[tool.setuptools.packages.find]
+where = ["src"]
